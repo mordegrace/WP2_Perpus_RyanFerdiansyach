@@ -1,7 +1,6 @@
-###################
-Web Programming 2
+# Web Programming 2
 Perpus (Pustaka Booking)
-###################
+
 
 Pustaka-booking merupakan aplikasi reservassi atau booking peminjaman buku pada
 sebuah perpustakaan yang dilakukan secara online dengan melibatkan anggota, admin dan
