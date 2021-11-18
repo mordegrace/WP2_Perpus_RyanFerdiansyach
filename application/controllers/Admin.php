@@ -5,7 +5,7 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // cek_login();
+        cek_login();
     }
 
     public function index()
@@ -20,4 +20,6 @@ class Admin extends CI_Controller
         $this->load->view('admin/index', $data);
         $this->load->view('templates/footer');
     }
+
+    
 }

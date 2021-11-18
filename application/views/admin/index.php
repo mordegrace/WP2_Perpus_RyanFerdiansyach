@@ -6,8 +6,8 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-md font-weight-bold text-white textuppercase mb-1">Jumlah Anggota</div>
-                            <div class="h1 mb-0 font-weight-bold text-white"><?=
+                            <div class="text-md font-weight-bold text-danger textuppercase mb-1">Jumlah Anggota</div>
+                            <div class="h1 mb-0 font-weight-bold text-danger"><?=
                                                                                 $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows();
                                                                                 ?></div>
                         </div>
@@ -24,9 +24,9 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-md font-weight-bold text-white textuppercase mb-1">Stok Buku Terdaftar
+                            <div class="text-md font-weight-bold text-primary textuppercase mb-1">Stok Buku Terdaftar
                             </div>
-                            <div class="h1 mb-0 font-weight-bold text-white">
+                            <div class="h1 mb-0 font-weight-bold text-primary">
                                 <?php
                                 $where = ['stok != 0'];
                                 $totalstok = $this->ModelBuku->total('stok', $where);
@@ -47,11 +47,11 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-md font-weight-bold text-white textuppercase mb-1">Buku yang dipinjam</div>
-                            <div class="h1 mb-0 font-weight-bold text-white">
+                            <div class="text-md font-weight-bold text-success textuppercase mb-1">Buku yang dipinjam</div>
+                            <div class="h1 mb-0 font-weight-bold text-success">
                                 <?php
                                 $where = ['dipinjam != 0'];
-                                $totaldipinjam = $this->ModelBuku->total(
+                                  $totaldipinjam = $this->ModelBuku->total(
                                     'dipinjam',
                                     $where
                                 );
@@ -71,10 +71,10 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            84
-                            <div class="text-md font-weight-bold text-white textuppercase mb-1">Buku yang dibooking
+                        
+                            <div class="text-md font-weight-bold text-warning textuppercase mb-1">Buku yang dibooking
                             </div>
-                            <div class="h1 mb-0 font-weight-bold text-white">
+                            <div class="h1 mb-0 font-weight-bold text-warning">
                                 <?php
                                 $where = ['dibooking !=0'];
                                 $totaldibooking = $this->ModelBuku->total('dibooking', $where);
@@ -96,7 +96,7 @@
     <!-- row table-->
     <div class="row">
         <div class="table-responsive table-bordered col-sm-5 ml-auto mrauto mt-2">
-            <div class="page-header">
+            <div class="page-header">x
                 <span class="fas fa-users text-primary mt-2 "> Data
                     User</span>
                 <a class="text-danger" href="<?php echo base_url('user/data_user'); ?>">
@@ -108,7 +108,6 @@
                         <th>#</th>
                         <th>Nama Anggota</th>
                         <th>Email</th>
-                        85
                         <th>Role ID</th>
                         <th>Aktif</th>
                         <th>Member Sejak</th>
@@ -124,7 +123,7 @@
                         <td><?= $a['email']; ?></td>
                         <td><?= $a['role_id']; ?></td>
                         <td><?= $a['is_active']; ?></td>
-                        <td><?= date('Y', $a['tanggal_input']); ?></td>
+                        <td><?= date('Y', $a['tanggal']); ?></td>
                     </tr>
                     <?php } ?>
                 </tbody>
