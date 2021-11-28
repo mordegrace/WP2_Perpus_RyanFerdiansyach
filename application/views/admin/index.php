@@ -8,7 +8,7 @@
                         <div class="col mr-2">
                             <div class="text-md font-weight-bold text-danger textuppercase mb-1">Jumlah Anggota</div>
                             <div class="h1 mb-0 font-weight-bold text-danger"><?=
-                                                                                $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows();
+                                                                                $this->ModelUser->getUserWhere(['is_active' => 1])->num_rows();
                                                                                 ?></div>
                         </div>
                         <div class="col-auto">
@@ -47,11 +47,12 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-md font-weight-bold text-success textuppercase mb-1">Buku yang dipinjam</div>
+                            <div class="text-md font-weight-bold text-success textuppercase mb-1">Buku yang dipinjam
+                            </div>
                             <div class="h1 mb-0 font-weight-bold text-success">
                                 <?php
                                 $where = ['dipinjam != 0'];
-                                  $totaldipinjam = $this->ModelBuku->total(
+                                $totaldipinjam = $this->ModelBuku->total(
                                     'dipinjam',
                                     $where
                                 );
@@ -71,7 +72,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                        
+
                             <div class="text-md font-weight-bold text-warning textuppercase mb-1">Buku yang dibooking
                             </div>
                             <div class="h1 mb-0 font-weight-bold text-warning">
@@ -97,8 +98,7 @@
     <div class="row">
         <div class="table-responsive table-bordered col-sm-5 ml-auto mrauto mt-2">
             <div class="page-header">x
-                <span class="fas fa-users text-primary mt-2 "> Data
-                    User</span>
+                <span class="fas fa-users text-primary mt-2 "> Data User</span>
                 <a class="text-danger" href="<?php echo base_url('user/data_user'); ?>">
                     <i class="fas fa-search mt-2 floatright"> Tampilkan</i></a>
             </div>
@@ -131,8 +131,7 @@
         </div>
         <div class="table-responsive table-bordered col-sm-5 ml-auto mrauto mt-2">
             <div class="page-header">
-                <span class="fas fa-book text-warning mt-2"> Data
-                    Buku</span>
+                <span class="fas fa-book text-warning mt-2"> Data Buku</span>
                 <a href="<?= base_url('buku'); ?>">
                     <i class="fas fa-search text-primary mt-2 float-right">Tampilkan</i>
                 </a>

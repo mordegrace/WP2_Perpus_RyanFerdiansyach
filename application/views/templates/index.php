@@ -12,7 +12,8 @@
                                                                                 ?></div>
                         </div>
                         <div class="col-auto">
-                            <a href="<?= base_url('user/anggota'); ?>"><i class="fas fa-users fa-3x text-warning"></i></a>
+                            <a href="<?= base_url('user/anggota'); ?>"><i
+                                    class="fas fa-users fa-3x text-warning"></i></a>
                         </div>
                     </div>
                 </div>
@@ -110,7 +111,6 @@
                         <th>#</th>
                         <th>Nama Anggota</th>
                         <th>Email</th>
-                        85
                         <th>Role ID</th>
                         <th>Aktif</th>
                         <th>Member Sejak</th>
@@ -120,14 +120,14 @@
                     <?php
                     $i = 1;
                     foreach ($anggota as $a) { ?>
-                        <tr>
-                            <td><?= $i++; ?></td>
-                            <td><?= $a['nama']; ?></td>
-                            <td><?= $a['email']; ?></td>
-                            <td><?= $a['role_id']; ?></td>
-                            <td><?= $a['is_active']; ?></td>
-                            <td><?= date('Y', $a['tanggal_input']); ?></td>
-                        </tr>
+                    <tr>
+                        <td><?= $i++; ?></td>
+                        <td><?= $a['nama']; ?></td>
+                        <td><?= $a['email']; ?></td>
+                        <td><?= $a['role_id']; ?></td>
+                        <td><?= $a['is_active']; ?></td>
+                        <td><?= date('Y', $a['tanggal_input']); ?></td>
+                    </tr>
                     <?php } ?>
                 </tbody>
             </table>
@@ -158,15 +158,15 @@
                         <?php
                         $i = 1;
                         foreach ($buku as $b) { ?>
-                            <tr>
-                                <td><?= $i++; ?></td>
-                                <td><?= $b['judul_buku']; ?></td>
-                                <td><?= $b['pengarang']; ?></td>
-                                <td><?= $b['penerbit']; ?></td>
-                                <td><?= $b['tahun_terbit']; ?></td>
-                                <td><?= $b['isbn']; ?></td>
-                                <td><?= $b['stok']; ?></td>
-                            </tr>
+                        <tr>
+                            <td><?= $i++; ?></td>
+                            <td><?= $b['judul_buku']; ?></td>
+                            <td><?= $b['pengarang']; ?></td>
+                            <td><?= $b['penerbit']; ?></td>
+                            <td><?= $b['tahun_terbit']; ?></td>
+                            <td><?= $b['isbn']; ?></td>
+                            <td><?= $b['stok']; ?></td>
+                        </tr>
                         <?php } ?>
                     </tbody>
                 </table>

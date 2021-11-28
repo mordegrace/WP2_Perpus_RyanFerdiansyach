@@ -3,7 +3,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('autentifikasi') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-book"></i>
+            <i class="fas fa-book" style="color: lightblue;"></i>
         </div>
         <div class="sidebar-brand-text text-white mx-3">Pustaka Booking</div>
     </a>
@@ -19,6 +19,11 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link pb-0" href="<?= base_url('buku/kategori'); ?>">
+            <i class="fa fa-fw fa book"></i>
+            <span class="text-white">Kategori Buku</span></a>
+    </li>
     <li class="nav-item">
         <a class="nav-link pb-0" href="<?= base_url('buku'); ?>">
             <i class="fa fa-fw fa book"></i>

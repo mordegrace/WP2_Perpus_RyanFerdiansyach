@@ -22,7 +22,6 @@
                             src="<?= base_url('assets/img/profile/') . $user['image']; ?>">
                     </a>
                     <!-- Dropdown - User Information -->
-
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                         aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="<?= base_url('user'); ?>">
@@ -31,7 +30,7 @@
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?= base_url('autentifikasi/logout'); ?>" data-toggle="modal"
-                            datatarget="#logoutModal">
+                            data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fafw mr-2 text-gray-400"></i>
                             Logout
                         </a>
